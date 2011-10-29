@@ -1,0 +1,12 @@
+This program reads from standard input and prefixes each line read with the 
+elapsed time in hours:minutes:seconds, from when the program was started.
+
+You might want to use this to add a time code to ICYCast/Shoutcast song titles
+that are output from mplayer when downloading an internet stream, as it does not
+appear to preserve the ICYCast data when dumping the stream.
+
+OS X Usage:
+ 
+#!/bin/sh
+/Library/Application\ Support/ffmpegX/mplayer -dumpstream <STREAM> -dumpfile `date "+%Y%m%d"`_<NAME>.pls | ./tcode
+ 
